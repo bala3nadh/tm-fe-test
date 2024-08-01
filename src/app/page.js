@@ -106,11 +106,11 @@ const SignupForm = () => {
           Sign up
         </Typography>
         <Card sx={{ border: '1px solid lightgrey' }}>     
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', borderBottom: errors.fullName ? '1px solid red' : '1px solid lightgrey', padding: '15px 10px' }}>
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', borderBottom: errors.fullName ? '1px solid #EF4444' : '1px solid lightgrey', padding: '15px 10px' }}>
             <FeedOutlinedIcon />
             <Typography variant='h5'>Your Information</Typography>
           </Box>
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.fullName ? '#fef2f2' : '#fff', borderBottom: errors.fullName ? '1px solid red' : '1px solid lightgrey' }}>
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.fullName ? '#fef2f2' : '#fff', borderBottom: errors.fullName ? '1px solid #EF4444' : '1px solid lightgrey' }}>
             <TextField
               name="fullName"
               variant='filled'
@@ -131,9 +131,9 @@ const SignupForm = () => {
               label={errors.fullName}
               fullWidth
             />
-            <EditOutlinedIcon sx={{ height: '25px', width: '25px', color: errors.fullName ? 'red' : 'black' }} />
+            <EditOutlinedIcon sx={{ height: '25px', width: '25px', color: errors.fullName ? '#EF4444' : 'black' }} />
           </Box>
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.address ? '#fef2f2' : '#fff', borderBottom: errors.address ? '1px solid red' : '1px solid lightgrey' }}>
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.address ? '#fef2f2' : '#fff', borderBottom: errors.address ? '1px solid #EF4444' : '1px solid lightgrey' }}>
             <TextField
               placeholder="Address"
               variant='filled'
@@ -154,9 +154,9 @@ const SignupForm = () => {
               label={errors.address}
               fullWidth
             />
-            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.address ? 'red' : 'black' }} />
+            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.address ? '#EF4444' : 'black' }} />
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: errors.city ? '1px solid red' : '1px solid lightgrey' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: errors.city ? '1px solid #EF4444' : '1px solid lightgrey' }}>
             <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', borderRight: '1px solid lightgrey', backgroundColor: errors.city ? '#fef2f2' : '#fff' }}>
               <TextField
                 placeholder="City"
@@ -178,7 +178,7 @@ const SignupForm = () => {
                 label={errors.city}
                 fullWidth
               />
-              <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.city ? 'red' : 'black' }} />
+              <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.city ? '#EF4444' : 'black' }} />
             </Box>
             <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.state ? '#fef2f2' : '#fff' }}>
               <TextField
@@ -201,7 +201,7 @@ const SignupForm = () => {
                 label={errors.state}
                 fullWidth
               />
-              <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.state ? 'red' : 'black' }} />    
+              <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.state ? '#EF4444' : 'black' }} />    
             </Box>
           </Box>
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.phoneNumber ? '#fef2f2' : '#fff', borderBottom: '1px solid lightgrey' }}>
@@ -226,9 +226,9 @@ const SignupForm = () => {
               label={errors.phoneNumber}
               fullWidth
             />
-            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.phoneNumber ? 'red' : 'black' }} />
+            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.phoneNumber ? '#EF4444' : 'black' }} />
           </Box>
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.dateOfBirth ? '#fef2f2' : '#fff', borderBottom: errors.dateOfBirth ? '1px solid red' : '1px solid lightgrey' }}>
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', backgroundColor: errors.dateOfBirth ? '#fef2f2' : '#fff', borderBottom: errors.dateOfBirth ? '1px solid #EF4444' : '1px solid lightgrey' }}>
             <TextField
               variant='filled'
               sx={{
@@ -248,7 +248,7 @@ const SignupForm = () => {
               label={errors.dateOfBirth}
               fullWidth
             />
-            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.dateOfBirth ? 'red' : 'black' }} />
+            <EditOutlinedIcon sx={{ height: '30px', width: '40px', color: errors.dateOfBirth ? '#EF4444' : 'black' }} />
           </Box>
           <TextField
             variant='filled'
