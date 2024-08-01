@@ -7,7 +7,6 @@ import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const SignupForm = () => {
-  const [selectedOption, setSelectedOption] = useState('Offer Terms');
   const [formData, setFormData] = useState({
     fullName: '',
     address: '',
@@ -91,9 +90,9 @@ const SignupForm = () => {
     <Box sx={{display:'flex', flexDirection:{xs:'column',sm:"column",md:'row',lg:'row',xl:'row'},alignItems:'center',justifyContent:'center',width:'100%' ,height:'100vh'}}>
     <div class="bg-image">
     </div>
-    <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'center', fontFamily: 'sans serif', gap:'5%',padding:'10px',width:{xs:'100%',sm:'100%',md:'50%',lg:'50%',xl:'50%'},height:{xs:'50%',sm:'50%',md:'100%',lg:'100%',xl:'100%'} }}>
+    <Box sx={{ display: 'flex', flexDirection:'column', alignItems: 'center', fontFamily: 'sans serif', gap:'5%',padding:'24px',width:{xs:'100%',sm:'100%',md:'50%',lg:'50%',xl:'50%'},height:{xs:'50%',sm:'50%',md:'100%',lg:'100%',xl:'100%'} }}>
       <Box sx={{display:'flex',justifyContent:'space-between',width:'100%'}}>
-        <Typography sx={{fontSize:'16px',fontFamily:'Tiempos Headline Regular',fontWeight:'bold',color:'green'}}>Quality Health</Typography>
+        <div><a id="nav-logo" href="/"><img src="https://storage.googleapis.com/cdn.healthtrak.com/app/sha-28a0f13/public/img/sharecare/logo.svg"></img></a></div>
         <Button sx={{padding:'3px 5px',fontSize:'12px',color:'green',borderColor:"green"}} variant="outlined">How it Works</Button>
       </Box>
       <Box
@@ -295,9 +294,21 @@ const SignupForm = () => {
           <Typography>Continue with email</Typography>
         </Button>
         <Box sx={{display:'flex',flexWrap:'wrap',alignItems:'start',gap:'2px'}}>
-          <Typography sx={{ color: 'grey',whiteSpace:'nowrap' }}>By Signing up, I agree to the &nbsp;</Typography>
-          <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone" style={{color: '#00BFA5', fontFamily: 'inherit', marginTop: '3px'}} href="https://www.sharecare.com/terms/terms" target="_blank">Offer Terms</a>
-          <ExpandMoreIcon />
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1bh-content"
+          id="panel1bh-header"
+        >
+          <Typography sx={{ color: 'grey',whiteSpace:'nowrap'}}>By Signing up, I agree to the &nbsp;</Typography>
+          <Typography sx={{ color: '#00BFA5', width: '90px' }}><a href="https://www.sharecare.com/terms/terms" target="_blank">Offer Terms</a></Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            I agree to the Offer Terms and understand I am creating a Sharecare account. I agree to the Sharecare Privacy Policy, Terms, and, if applicable to me, the Privacy Notice for California Residents. I consent to Sharecare’s processing of any health information I may provide, for the purposes listed in the Privacy Policy. I agree to receive emails, offers, alerts, and other notices. I understand that I can opt-out of marketing communications at any time.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
         </Box>
       </Box>
     </Box>
