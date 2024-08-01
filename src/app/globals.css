@@ -113,7 +113,8 @@ a {
   background-position: left top;
   background-size: 100% 100%;
   flex: 1;
-  height: 100%;
+  height: calc(100% - 24px);
+  margin: 24px;
 }
 
 .MuiPaper-root.MuiAccordion-root {
@@ -121,4 +122,9 @@ a {
   box-shadow: none !important;
   background-color: transparent;
   width: 150px;
+}
+
+.MuiAccordionDetails-root {
+  width: 350px;
+  margin-left: -100px;
 }
